@@ -1,0 +1,42 @@
+.posts-main {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.blogpost {
+  width: calc( 33% - 16px );
+  background-color: #ccc;
+  padding-bottom: 1rem;
+  margin: 0;
+  display: inline-block;
+  border: 8px white solid;
+}
+
+.blogpost--featured {
+  /* @extend .blogpost; */
+  background-color: #7f7;
+  border: 8px #050 solid;
+}
+
+.featured-article {
+  width: calc( 33% - 16px );
+  background-color: #7f7;
+  padding-bottom: 1rem;
+  margin: 0;
+  display: inline-block;
+  border: 8px #050 solid;
+}
+
+.blogpost__thumbnail {
+  width: 80%;
+  margin: 10% 10% 1rem 10%;
+}
+
+.blogpost__title {
+  font-size: 1.4rem;
+  margin: 0.25rem 10%;
+}
+
+.blogpost__summary {
+  margin: 0.25rem 10% 1rem 10%;
+}

@@ -1,0 +1,22 @@
+.rectangle, .rectangle--rounded, .rectangle--rounded--green, .rectangle--green, .my-rectangle {
+  width: 200px;
+  height: 100px;
+  margin: 20px;
+  padding: 20px;
+  display: inline-block;
+  border: 1px solid black; }
+
+.rectangle--rounded, .rectangle--rounded--green {
+  border-radius: 20px; }
+
+.rectangle--green {
+  background-color: green; }
+
+.rectangle--rounded--green {
+  background-color: green; }
+
+.my-rectangle {
+  border-radius: 20px;
+  background-color: green; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,21 @@
+.content .blogpost-thumbnail {
+    width: 20rem;
+    height: 20rem;
+    font-size: 12px;
+    margin: 1rem;
+    background-color: #ccc;
+    border: 2px black dotted;
+}
+
+.sidebar .blogpost-thumbnail {
+    width: 10rem;
+    height: 15rem;
+    font-size: 12px;
+    margin: 1rem;
+    background-color: #ccc;  
+    border: 2px black dotted;  
+}
+
+.content, .sidebar {
+  display: inline-block;
+}

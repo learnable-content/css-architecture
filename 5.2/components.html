@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Component library</title>
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    <body>
+        <div class="main">
+            <form class="form" action="javascript:void(0)">
+                <fieldset class="form__module">
+                    <legend>
+                        Textfields, Textareas
+                    </legend>
+                    <div class="module__row">
+                        <span class="module-row__field">
+                            <label class="form__label  mandatory-input">
+                                Label
+                            </label>
+                            <input type="text"
+                                   class="form__textfield"
+                                   placeholder="Placeholder" />
+                        </span>
+                        <span class="module-row__field">
+                            <label class="form__label  mandatory-input">
+                                Label
+                            </label>                               
+                            <input type="text"
+                                   class="form__textfield" 
+                                   placeholder="Placeholder" />
+                        </span>                               
+                    </div>
+                    <div class="module__row">
+                        <span class="module-row__field--wide">
+                            <label class="form__label">
+                                Label
+                            </label>  
+                            <input type="text"
+                                   class="form__textfield"
+                                   placeholder="Placeholder" />
+                        </span>
+                    </div>  
+                    <div class="module__row">
+                        <span class="module-row__field--wide">
+                            <label class="form__label  mandatory-input">
+                                Long Label
+                            </label>  
+                            <textarea class="form__textarea  mandatory-input"
+                                      placeholder="Placeholder"></textarea>
+                        </span>
+                    </div>                  
+                </fieldset>
+                <fieldset class="form__module">
+                    <legend>
+                        Checkboxes, Radio Buttons, Dropdowns, Buttons
+                    </legend>
+                    <div class="module__row">
+                        <span class="module-row__field">
+                            <label class="form__label">Label</label>
+                            <input type="checkbox"
+                                   class="form__checkbox"
+                                   value="1" />
+                            <label class="form__checkbox-label">
+                                One
+                            </label>
+                        </span>
+                        <span class="module-row__field">
+                            <label class="form__label">Label</label>
+                            <input type="radio"
+                                   name="radio-group"
+                                   class="form__radio"
+                                   value="1" />
+                            <label class="form__radio-label">
+                                One
+                            </label>  
+                            <input type="radio"
+                                   name="radio-group"
+                                   class="form__radio"
+                                   value="2" />
+                            <label class="form__radio-label">
+                                Two
+                            </label>                        
+                        </span>
+                    </div>
+                    <div class="module__row">                
+                        <span class="module-row__field">
+                            <label class="form__label  mandatory-input">
+                                Label
+                            </label>                              
+                            <select name="test" 
+                                    class="form__select"
+                                    placeholder="Select an option">
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                            </select>
+                        </span>
+                    </div>
+                    <div class="module__row">
+                        <span class="module-row__field--wide">
+                            <button class="form__button">Press me</button>
+                        </span>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>
+
+
+
