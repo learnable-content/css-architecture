@@ -1,49 +1,23 @@
-![](headings/1.1.png)
+![](CSS_Architecture_handouts/headings/2.1.png)
 
-Hello, my name is Zsolt Nagy, and this is **CSS architecture** course. We will demystify the topic of how to write solid CSS architectures on all levels. Firstly, let's see why CSS architecture is important.
+This lesson is going to be about writing **maintainable CSS code**. We will start with discovering the rules of selector efficiency and selector simplification. Then we're going to talk about the secret of descriptive CSS class names. This is a very interesting topic that's going to be very beneficial for you. At the end of this section, we're going to look at how to specify units in CSS in order to write maintainable code. Let's start with examining selector efficiency and selector simplification.
 
-As you know, basic CSS is one of the easiest languages you can learn in software development. This is not only an advantage, but also a disadvantage because it is very easy to create bad CSS. You have most likely seen a lot of cases when you saw unmaintainable CSS containing a lot of overrides, containing a lot of erroneous declarations that are completely different in two separate browsers.
+First, we're going to discover how selectors work in CSS, in other words, how browsers read and interpret selectors in CSS. Using this knowledge, we're going to optimize some CSS selectors.
 
-Given that it is very easy to make maintainability aerated mistakes in CSS, we have to establish some guidelines that make sure that we keep writing CSS at the highest standard. But wait a minute. What makes our CSS maintainable? Is it the tools we use, the preprocessors, the frameworks?
+All you need to understand about reading CSS selectors that they are read from right to left. This means that the browser first interprets the right-most selector and then moves leftwards. This is not too intuitive in case you write from left to right. However, this is exactly what you need to consider when optimizing your code.
 
-Yes, they all contribute to our comfort, but using the right tools, using the right preprocessors and frameworks are not enough. Even if a lot of people use these tools, preprocessors, and frameworks, only a small fraction of software developers are capable of making good CSS: well structured, maintainable, and scalable.
+The most efficient way to retrieve a selector is to find an identifier. This is because identifiers are unique in all your documents so you just need to find one identifier and then you're done.
 
-By the end of this course, you should have a good idea of how to design, create, and contribute to stylesheets that can be found in large applications or component libraries. Our goal is to learn how to create structured, scalable, and maintainable CSS. First, you will learn the goals of maintainable CSS architecture.
+The second most efficient way is classes. Even though identifiers may be slightly more efficient then classes, we will soon learn that I generally discourage you to use identifiers anywhere in your document. This is because identifiers are global resources and you cannot guarantee that in one part of your application you're not going to use an identifier that is already used somewhere else. For this reason, I highly recommend staying away from ID attributes in general. I know it might be slightly hard, for example, you might want to connect a label with an input field but there are other ways to do that.
 
-You will find out how to apply software engineering principles to write maintainable CSS. We will put a lot of effort into understanding how to write specific, efficient, and descriptive CSS selectors. Once we know how to write maintainable code on selector level and how to apply the principles, it's time to establish a solid CSS hierarchy.
+The least efficient way of retrieving DOM nodes is using attributes. Imagine, instead of using the `input` tag if you just used `type=[text]`, then you would check every single DOM node if it has an attribute type, and if the type exists, whether it matches with text. It is very inefficient, so whenever you can, just stay away from retrieving attributes.
 
-Let me briefly introduce myself. My name is Zsolt Nagy. I'm a technical development lead in Berlin, Germany. I have a front end and full stack development background, which means that I have a perspective on applications from multiple angles. For instance, my last course on SitePoint had a front end development topic, namely the introduction of TypeScript.
+Don't take these rules very seriously though, because today's processors are very, very efficient.
 
-In order to benefit the most from this course, I highly recommend that you learn the principles of writing basic HTML and CSS. The knowledge of how to preprocess CSS using, for instance, Sass or Less will be required to understand the practical examples belonging to this course. We will go through six lessons:
+There are many other mistakes that you can make that could cause problems of several magnitudes higher than just using attributes or classes. The differences might just be negligible. In fact, the way how you change selectors matters a lot more than the types of selectors that you use. Even if you use attributes selectors, you can lose a lot more time by chaining the wrong type of selectors after each other than by using the least efficient selector possible.
 
-* During the lesson 1 we will define the goals of CSS architecture
-* Lesson 2 is about writing maintainable CSS code, mainly on selector and rule level
-* Lesson 3 introduces some principles of maintainable CSS architecture
-* In lesson 4 you will learn how to establish a style hierarchy from the ground up
-* In lesson 5 we will put theory into practice
-* Lesson 6 is the end of the course where we will draw some conclusions.
+In extreme cases though, pay attention to selectors that might lead to retrieving thousands of DOM nodes. These could be retrieving all `div` of the page or the universal selector `*` which retrieves all DOM nodes.
 
+Also, don't over qualify your selectors. For example, Don't write things like `li.header nav .item`. Over optimizing selector performance doesn't pay off. Focus your efforts on discovering other bottlenecks in your application and you're going to win a lot more in terms of performance. Focusing on selector efficiency too much is premature optimization which is a form of perfectionism and perfectionism rarely ever pays off in software engineering unless we have defined quality standards.
 
-
-# Index for the CSS Architecture course
-
-* [Lesson 1-1](CSS_Architecture_handouts/lesson1-1.md)
-* [Lesson 1-2](CSS_Architecture_handouts/lesson1-2.md)
-* [Lesson 2-1](CSS_Architecture_handouts/lesson2-1.md)
-* [Lesson 2-2](CSS_Architecture_handouts/lesson2-2.md)
-* [Lesson 2-3](CSS_Architecture_handouts/lesson2-3.md)
-* [Lesson 3-1](CSS_Architecture_handouts/lesson3-1.md)
-* [Lesson 3-2](CSS_Architecture_handouts/lesson3-2.md)
-* [Lesson 3-3](CSS_Architecture_handouts/lesson3-3.md)
-* [Lesson 3-4](CSS_Architecture_handouts/lesson3-4.md)
-* [Lesson 3-5](CSS_Architecture_handouts/lesson3-5.md)
-* [Lesson 3-6](CSS_Architecture_handouts/lesson3-6.md)
-* [Lesson 4-1](CSS_Architecture_handouts/lesson4-1.md)
-* [Lesson 4-2](CSS_Architecture_handouts/lesson4-2.md)
-* [Lesson 5-1](CSS_Architecture_handouts/lesson5-1.md)
-* [Lesson 5-2](CSS_Architecture_handouts/lesson5-2.md)
-* [Lesson 5-3](CSS_Architecture_handouts/lesson5-3.md)
-* [Lesson 5-4](CSS_Architecture_handouts/lesson5-4.md)
-* [Lesson 6-1](CSS_Architecture_handouts/lesson6-1.md)
-
-
+There is an option to improve your CSS efficiency with a very simple trick very quickly: use UnCSS tool. It removes unused CSS from your code automatically. You don't even have to think about it. You just have to execute it and you're going to make your code slightly more performant.
