@@ -1,4 +1,4 @@
-![](CSS_Architecture_handouts/headings/4.1.png)
+![](headings/4.1.png)
 
 This lesson is going to be about **hierarchy stylesheets**. In this section, we're going to talk about the foundations, namely, CSS resets and normalizers. We're going to build our hierarchy on top of resets and normalizers. And in the next section, we're gonna examine how to establish hierarchical styles from text styling to component styling to some specific overrides.
 
