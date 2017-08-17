@@ -1,4 +1,4 @@
-![](CSS_Architecture_handouts/headings/3.6.png)
+![](headings/3.6.png)
 
 We will conclude this lesson with the introduction of an example CSS architecture called **ITCSS**. This introduction was included here so that you can get an overview of how a CSS architecture can encourage you to write CSS according to the principles of software engineering. ITCSS is backed by CSS Wizardry, Harry Roberts.
 
