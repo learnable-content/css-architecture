@@ -1,4 +1,4 @@
-![](CSS_Architecture_handouts/headings/4.2.png)
+![](headings/4.2.png)
 
 In this video, we're going to talk about establishing hierarchical styles. First, we're going to look at the different elements a page consists of. And then we'll figure out what additional styles go to the top of the hierarchy. We're going to have a look at two different CSS architectures that are hierarchical in nature, ITCSS and SMACSS.
 
