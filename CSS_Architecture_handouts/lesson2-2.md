@@ -1,4 +1,4 @@
-![](CSS_Architecture_handouts/headings/2.2.png)
+![](headings/2.2.png)
 
 **Descriptive naming** is one of the top creative challenges that software developers face. Whenever we name a class, we have to find the shortest possible class name. To make matters even worse, the usage of CSS classes is somewhat overloaded. This is because we can use a CSS class for styling purposes and also for application logic.
 
