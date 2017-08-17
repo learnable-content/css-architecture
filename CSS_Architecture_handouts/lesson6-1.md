@@ -1,4 +1,4 @@
-![](CSS_Architecture_handouts/headings/6.1.png)
+![](headings/6.1.png)
 
 Congratulations, you have reached the end of the course. I hope that you have learned a lot on how to write maintainable CSS and how to think in terms of architecture when it comes to creating CSS that lasts.
 
