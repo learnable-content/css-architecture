@@ -1,4 +1,4 @@
-![](headings/1.1.png)
+![](CSS_Architecture_handouts/headings/1.1.png)
 
 Hello, my name is Zsolt Nagy, and this is **CSS architecture** course. We will demystify the topic of how to write solid CSS architectures on all levels. Firstly, let's see why CSS architecture is important.
 
